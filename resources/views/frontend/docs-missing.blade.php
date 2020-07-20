@@ -1,9 +1,9 @@
-<h1>Page not found.</h1>
+<h1>喔靠！我找不到你要的東西 :(</h1>
 
 @if($otherVersions->isEmpty())
-    <p>Nothing to see here.</p>
+    <p>這裡什麼都沒有。</p>
 @else
-    <p>This page does not exist for this version of Laravel but was found in other versions.</p>
+    <p>這個版本的 Laravel 並沒有翻譯這頁內容，但你可以在其他版本當中找到這頁的翻譯。</p>
 
     <div class="content-list">
         <ul>

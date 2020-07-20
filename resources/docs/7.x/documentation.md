@@ -1,15 +1,15 @@
-- ## Prologue
-    - [Release Notes](/docs/{{version}}/releases)
-    - [Upgrade Guide](/docs/{{version}}/upgrade)
-    - [Contribution Guide](/docs/{{version}}/contributions)
-    - [API Documentation](/api/7.x)
-- ## Getting Started
-    - [Installation](/docs/{{version}}/installation)
-    - [Configuration](/docs/{{version}}/configuration)
-    - [Directory Structure](/docs/{{version}}/structure)
+- ## 前言
+    - [發行說明](/docs/{{version}}/releases)
+    - [升級指南](/docs/{{version}}/upgrade)
+    - [貢獻指南](/docs/{{version}}/contributions)
+    - [API 文件](/api/7.x)
+- ## 入門
+    - [安裝](/docs/{{version}}/installation)
+    - [設定](/docs/{{version}}/configuration)
+    - [目錄結構](/docs/{{version}}/structure)
     - [Homestead](/docs/{{version}}/homestead)
     - [Valet](/docs/{{version}}/valet)
-    - [Deployment](/docs/{{version}}/deployment)
+    - [部署方式](/docs/{{version}}/deployment)
 - ## Architecture Concepts
     - [Request Lifecycle](/docs/{{version}}/lifecycle)
     - [Service Container](/docs/{{version}}/container)

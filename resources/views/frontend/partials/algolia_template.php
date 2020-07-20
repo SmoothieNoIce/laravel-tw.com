@@ -48,7 +48,7 @@
 
 <script id="search_empty_template" type="text/template">
 	<div class="autocomplete-wrapper empty">
-		<div class="h2">We didn't find any result for "{{query}}". Sorry!</div>
+		<div class="h2">找不到 "{{query}}" 的任何結果，太可惜了！</div>
 	</div>
 </script>
 

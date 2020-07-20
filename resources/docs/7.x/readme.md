@@ -1,7 +1,7 @@
-# Laravel Documentation
+# Laravel 文件資料
 
-You can find the online version of the Laravel documentation at [https://laravel.com/docs](https://laravel.com/docs)
+您可以在 [https://laravel-tw.herokuapp.com/docs](https://laravel-tw.herokuapp.com/docs) 找到 Laravel 文件的線上版本。
 
-## Contribution Guidelines
+## 貢獻準則
 
-If you are submitting documentation for the **current stable release**, submit it to the corresponding branch. For example, documentation for Laravel 7 would be submitted to the `7.x` branch. Documentation intended for the next release of Laravel should be submitted to the `master` branch.
+如果您要提交「當前穩定發行版」的文件，請將其提交到相應的分支，例如 Laravel 7.x 的文件就提交到 `7.x` 分支，用於 Laravel 下一版版本的文件應該提交到 `master` 分支。

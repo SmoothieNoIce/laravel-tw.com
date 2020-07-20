@@ -10,12 +10,11 @@
                     <div class="banner">
                         <a href="https://vapor.laravel.com/">
                             <div class="banner_icon icon_nova">
-                                <img src="/img/ecosystem/vapor.min.svg" alt="Vapor">
+                                <img src="/img/ecosystem/vapor.min.svg" alt="Nova">
                             </div>
                             <div class="banner_content">
-                                 <p class="small">
-                                    Laravel Vapor is now available! Sign up today! <span class="arrow">→</span>
-                                </p>
+                                <p class="small">Laravel Vapor 現在已經上市！立即註冊！
+                                    <span class="arrow">→</span></p>
                             </div>
                         </a>
                     </div>
@@ -27,30 +26,15 @@
                                 </video>
                             </div>
                             <div class="hero_content">
-                                <h1>The PHP Framework for Web Artisans</h1>
-                                <p>Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.</p>
-                                <div class="hero_actions" style="z-index: -999;">
-                                    <a href="/docs" class="btn"><span>Documentation</span></a>
-                                    <a href="https://laracasts.com" data-remodal-target="video_modal" class="btn secondary"><span><img src="/img/icons/play.min.svg" alt="Play Video"><span>Watch Laracasts</span></span></a>
-
-<!--                                     <div data-remodal-id="video_modal" class="video_modal remodal">
-                                        <div class="video_contain">
-                                            <button data-remodal-action="close" class="remodal-close"></button>
-                                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/cAGQGXtBvs4?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
-                                        </div>
-                                    </div> -->
+                                <h1>為網頁藝術家所創造的 PHP 框架</h1>
+                                <p>Laravel 是一個語意直觀且優雅的網頁應用程式框架，我們已經奠定了一系列的基礎，使您可以自由自在的開發，而不會在芝麻小事上費盡心思。</p>
+                                <div class="hero_actions">
+                                    <a href="/docs" class="btn"><span>文件</span></a>
+                                    <a href="https://laracasts.com" data-remodal-target="video_modal" class="btn secondary"><span><img src="/img/icons/play.min.svg" alt="Play Video"><span>看看 Laracasts</span></span></a>
                                 </div>
                             </div>
                         </section>
                     </div>
-<!--                     <ul class="logos_list">
-                        <li><img src="/img/logos/wwe.min.svg" alt="WWE"></li>
-                        <li><img src="/img/logos/discovery.min.svg" alt="Discovery"></li>
-                        <li><img src="/img/logos/mcdonalds.min.svg" alt="McDonalds"></li>
-                        <li><img src="/img/logos/apple.min.svg" alt="Apple"></li>
-                        <li><img src="/img/logos/fox.min.svg" alt="20th Century Fox"></li>
-                        <li><img src="/img/logos/mcgraw_hill.min.svg" alt="McGraw Hill"></li>
-                    </ul> -->
                     <div class="contain">
                         <div class="content_block img_left">
                             <div class="bg">
@@ -64,8 +48,8 @@
                                 </div>
                                 <div class="content">
                                     <h1>Laravel Vapor</h1>
-                                    <p>Laravel Vapor is a serverless deployment platform for Laravel, powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love with the scalable simplicity of serverless.</p>
-                                    <a href="https://vapor.laravel.com" class="btn"><span>Learn More</span></a>
+                                    <p>Laravel Vapor 是由 AWS 支持的 Laravel 無伺服器部署平台，在 Vapor 上部署您的 Laravel 應用程式，並愛上無伺服器輕鬆且具有可擴展性的優勢。</p>
+                                    <a href="https://vapor.laravel.com" class="btn"><span>查看更多</span></a>
                                 </div>
                             @else
                                 <div class="image">
@@ -73,144 +57,124 @@
                                 </div>
                                 <div class="content">
                                     <h1>Laravel Forge</h1>
-                                    <p>Instant PHP Platforms on DigitalOcean, Linode, and more. Featuring push-to-deploy, Redis, queues, and everything else you could need to launch and deploy impressive Laravel applications.</p>
-                                    <a href="https://forge.laravel.com" class="btn"><span>Learn More</span></a>
+                                    <p>能夠依照需求將您的應用程式部署到 DigitalOcean、Linode ... 等等的雲端服務平台，並整合 Redis、隊列以及啟動 Laravel 應用程式所需的所有其他功能。</p>
+                                    <a href="https://forge.laravel.com" class="btn"><span>查看更多</span></a>
                                 </div>
                             @endif
                         </div>
 
                         <div class="ecosystem_block">
                             <div class="heading">
-                                <h6>Revolutionize how you build the web.</h6>
-                                <h1>The Laravel Ecosystem</h1>
+                                <h6>徹底改變您開發網頁應用程式的方式</h6>
+                                <h1>Laravel 生態系統</h1>
                             </div>
                             <ul class="ecosystem">
                                 <li class="sys_vapor">
                                     <a href="https://vapor.laravel.com">
-                                        <div class="system_icon"><img src="/img/ecosystem/vapor.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Vapor <span>Serverless Platform</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/vapor.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Vapor <span>無伺服器平台</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_forge">
                                     <a href="https://forge.laravel.com">
-                                        <div class="system_icon"><img src="/img/ecosystem/forge.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Forge <span>Server Management</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/forge.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Forge <span>伺服器管理</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_envoyer">
                                     <a href="https://envoyer.io">
-                                        <div class="system_icon"><img src="/img/ecosystem/envoyer.min.svg" alt="Icon">
-                                        </div>
+                                        <div class="system_icon"><img src="/img/ecosystem/envoyer.min.svg" alt="Icon"></div>
                                         <div class="system_info">Envoyer <span>Zero Downtime Deployment</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_horizon">
                                     <a href="/docs/{{DEFAULT_VERSION}}/horizon">
-                                        <div class="system_icon"><img src="/img/ecosystem/horizon.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Horizon <span>Queue Monitoring</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/horizon.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Horizon <span>隊列監控</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_nova">
                                     <a href="https://nova.laravel.com">
-                                        <div class="system_icon"><img src="/img/ecosystem/nova.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Nova <span>Administration Panel</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/nova.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Nova <span>後台管理</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_echo">
                                     <a href="/docs/{{DEFAULT_VERSION}}/broadcasting">
-                                        <div class="system_icon"><img src="/img/ecosystem/echo.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Echo <span>Realtime Events</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/echo.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Echo <span>即時事件</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_lumen">
                                     <a href="https://lumen.laravel.com">
-                                        <div class="system_icon"><img src="/img/ecosystem/lumen.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Lumen <span>Micro-Framework</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/lumen.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Lumen <span>微框架</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_homestead">
                                     <a href="/docs/{{DEFAULT_VERSION}}/homestead">
-                                        <div class="system_icon">
-                                            <img src="/img/ecosystem/homestead.min.svg" alt="Icon"></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/homestead.min.svg" alt="Icon"></div>
                                         <div class="system_info">Homestead <span>Pre-Packaged Vagrant Box</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_spark">
                                     <a href="https://spark.laravel.com">
-                                        <div class="system_icon"><img src="/img/ecosystem/spark.min.svg" alt="Icon">
-                                        </div>
+                                        <div class="system_icon"><img src="/img/ecosystem/spark.min.svg" alt="Icon"></div>
                                         <div class="system_info">Spark <span>SaaS App Scaffolding</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_valet">
                                     <a href="/docs/{{DEFAULT_VERSION}}/valet">
-                                        <div class="system_icon"><img src="/img/ecosystem/valet.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Valet <span>Dev Environment for Macs</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/valet.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Valet <span>Mac 的開發環境</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_mix">
                                     <a href="/docs/{{DEFAULT_VERSION}}/mix">
-                                        <div class="system_icon"><img src="/img/ecosystem/mix.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Mix <span>Webpack Asset Compilation</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/mix.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Mix <span>Webpack 檔案編譯</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_cashier">
                                     <a href="/docs/{{DEFAULT_VERSION}}/billing">
-                                        <div class="system_icon"><img src="/img/ecosystem/cashier.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Cashier <span>Subscription Billing</span>
-                                        </div>
+                                        <div class="system_icon"><img src="/img/ecosystem/cashier.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Cashier <span>訂閱計費整合</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_dusk">
                                     <a href="/docs/{{DEFAULT_VERSION}}/dusk">
-                                        <div class="system_icon"><img src="/img/ecosystem/dusk.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Dusk <span>Browser Testing and Automation</span>
-                                        </div>
+                                        <div class="system_icon"><img src="/img/ecosystem/dusk.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Dusk <span>瀏覽器測試和自動化測試</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_passport">
                                     <a href="/docs/{{DEFAULT_VERSION}}/passport">
-                                        <div class="system_icon">
-                                            <img src="/img/ecosystem/passport.min.svg" alt="Icon"></div>
-                                        <div class="system_info">Passport <span>Painless OAuth2 Implementation</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/passport.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Passport <span>簡單實踐 OAuth2</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_scout">
                                     <a href="/docs/{{DEFAULT_VERSION}}/scout">
-                                        <div class="system_icon"><img src="/img/ecosystem/scout.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Scout <span>Full-Text Search</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/scout.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Scout <span>全文搜索</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_socialite">
                                     <a href="/docs/{{DEFAULT_VERSION}}/socialite">
-                                        <div class="system_icon">
-                                            <img src="/img/ecosystem/socialite.min.svg" alt="Icon"></div>
-                                        <div class="system_info">Socialite <span>OAuth Authentication</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/socialite.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Socialite <span>OAuth 驗證</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_telescope">
                                     <a href="/docs/{{DEFAULT_VERSION}}/telescope">
-                                        <div class="system_icon">
-                                            <img src="/img/ecosystem/telescope.min.svg" alt="Icon"></div>
-                                        <div class="system_info">Telescope <span>Debug Assistant</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/telescope.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Telescope <span>Debug 助手</span></div>
                                     </a>
                                 </li>
                                 <li class="sys_tinker">
                                     <a href="https://github.com/laravel/tinker">
-                                        <div class="system_icon"><img src="/img/ecosystem/tinker.min.svg" alt="Icon">
-                                        </div>
-                                        <div class="system_info">Tinker <span>Interactive REPL</span></div>
+                                        <div class="system_icon"><img src="/img/ecosystem/tinker.min.svg" alt="Icon"></div>
+                                        <div class="system_info">Tinker <span>互動式 REPL</span></div>
                                     </a>
                                 </li>
                             </ul>
@@ -218,20 +182,19 @@
 
                         <div class="content_block bg_right resources">
                             <div class="content">
-                                <h6>Resources</h6>
-                                <h1>A community built for people like you</h1>
-                                <p>Whether you’re a solo developer or a 20-person team, getting started is simple thanks to our great community.</p>
+                                <h6>相關資源</h6>
+                                <h1>為您所建立的社群</h1>
+                                <p>無論您是開發人員還是 20 人的團隊，都要感謝我們的社群，使得它很容易上手。</p>
                                 <ul class="resource_list">
-                                    <li><a href="https://blog.laravel.com">Blog</a></li>
+                                    <li><a href="https://blog.laravel.com">部落格</a></li>
                                     <li><a href="https://laracasts.com">Laracasts</a></li>
-                                    <!-- <li><a href="http://laravelpodcast.com/">Podcast</a></li> -->
-                                    <li><a href="https://laravel-news.com">Laravel News</a></li>
+                                    <li><a href="https://laravel-news.com">Laravel 最新消息</a></li>
                                     <li><a href="https://laracon.us/">Laracon</a></li>
-                                    <li><a href="https://larajobs.com/">Jobs</a></li>
-                                    <li><a href="https://laracon.eu/">Laracon EU</a></li>
-                                    <li><a href="https://laracasts.com/discuss">Forums</a></li>
-                                    <li><a href="https://laracon.com.au/">Laracon AU</a></li>
-                                    <li><a href="https://certification.laravel.com/">Certification</a></li>
+                                    <li><a href="https://larajobs.com/">工作機會</a></li>
+                                    <li><a href="https://laracon.eu/">Laracon 歐盟</a></li>
+                                    <li><a href="https://laracasts.com/discuss">論壇</a></li>
+                                    <li><a href="https://laracon.com.au/">Laracon 澳洲</a></li>
+                                    <li><a href="https://certification.laravel.com/">相關認證</a></li>
                                 </ul>
                             </div>
 
@@ -239,10 +202,10 @@
                                 <div class="resource_icon">
                                     <img src="/img/icons/laracasts.min.svg" alt="Laracasts">
                                 </div>
-                                <h6>Featured Resource</h6>
+                                <h6>特色資源</h6>
                                 <h3>Laracasts</h3>
-                                <p class="small">Nine out of ten doctors recommend Laracasts over competing brands. Check them out, see for yourself, and massively level up your development skills in the process.</p>
-                                <a href="https://laracasts.com" class="btn secondary"><span>Start Learning →</span></a>
+                                <p class="small">10 位專家當中，就有 9 位推薦 Laracasts 而不是其他競爭品牌，不信你自己去玩玩看，然後順便提升你的開發技能。</p>
+                                <a href="https://laracasts.com" class="btn secondary"><span>立即加入 →</span></a>
                             </div>
                             <div class="bg">
                                 <video poster="/img/blocks/blocks_4.jpg" playsinline autoplay muted loop>
