@@ -28,6 +28,7 @@ $factory->define(User::class, function (Generator $faker) {
         'confirmation_code' => md5(uniqid(mt_rand(), true)),
         'active' => true,
         'confirmed' => true,
+        'api_token' => Str::random(64),
     ];
 });
 

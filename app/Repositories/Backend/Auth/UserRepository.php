@@ -18,6 +18,7 @@ use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
 use App\Repositories\BaseRepository;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 /**
  * Class UserRepository.
@@ -93,6 +94,25 @@ class UserRepository extends BaseRepository
     }
 
     /**
+     * @param $uuid
+     *
+     * @throws GeneralException
+     * @return mixed
+     */
+    public function findByEmail($email)
+    {
+        $user = $this->model
+            ->where('email', $email)
+            ->first();
+
+        if ($user instanceof $this->model) {
+            return $user;
+        }
+
+        throw new GeneralException(__('exceptions.backend.access.users.not_found'));
+    }
+
+    /**
      * @param array $data
      *
      * @throws \Exception
@@ -110,6 +130,7 @@ class UserRepository extends BaseRepository
                 'active' => isset($data['active']) && $data['active'] === '1',
                 'confirmation_code' => md5(uniqid(mt_rand(), true)),
                 'confirmed' => isset($data['confirmed']) && $data['confirmed'] === '1',
+                'api_token' => Str::random(64),
             ]);
 
             // See if adding any additional permissions
@@ -164,6 +185,7 @@ class UserRepository extends BaseRepository
                 'first_name' => $data['first_name'],
                 'last_name' => $data['last_name'],
                 'email' => $data['email'],
+                'api_token' => Str::random(64),
             ])) {
                 // Add selected roles/permissions
                 $user->syncRoles($data['roles']);

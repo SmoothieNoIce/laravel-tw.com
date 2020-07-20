@@ -13,6 +13,7 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 /**
  * Class UserRepository.
@@ -102,6 +103,7 @@ class UserRepository extends BaseRepository
                 'password' => $data['password'],
                 // If users require approval or needs to confirm email
                 'confirmed' => ! (config('access.users.requires_approval') || config('access.users.confirm_email')),
+                'api_token' => Str::random(64),
             ]);
 
             if ($user) {
@@ -140,6 +142,7 @@ class UserRepository extends BaseRepository
         $user->first_name = $input['first_name'];
         $user->last_name = $input['last_name'];
         $user->avatar_type = $input['avatar_type'];
+        $user->api_token = Str::random(64);
 
         // Upload profile image if necessary
         if ($image) {
