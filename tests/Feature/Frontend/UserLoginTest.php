@@ -25,13 +25,13 @@ class UserLoginTest extends TestCase
     {
         $user = factory(User::class)->create([
             'email' => 'john@example.com',
-            'password' => 'secret',
+            'password' => 'PASS@word1234',
         ]);
         Event::fake();
 
         $this->post('/login', [
             'email' => 'john@example.com',
-            'password' => 'secret',
+            'password' => 'PASS@word1234',
         ]);
 
         Event::assertDispatched(UserLoggedIn::class);
@@ -43,12 +43,12 @@ class UserLoginTest extends TestCase
     {
         factory(User::class)->states('inactive')->create([
             'email' => 'john@example.com',
-            'password' => 'secret',
+            'password' => 'PASS@word1234',
         ]);
 
         $response = $this->post('/login', [
             'email' => 'john@example.com',
-            'password' => 'secret',
+            'password' => 'PASS@word1234',
         ]);
 
         $response->assertSessionHas('flash_danger');
@@ -60,12 +60,12 @@ class UserLoginTest extends TestCase
     {
         factory(User::class)->states('unconfirmed')->create([
             'email' => 'john@example.com',
-            'password' => 'secret',
+            'password' => 'PASS@word1234',
         ]);
 
         $response = $this->post('/login', [
             'email' => 'john@example.com',
-            'password' => 'secret',
+            'password' => 'PASS@word1234',
         ]);
 
         $response->assertSessionHas('flash_danger');

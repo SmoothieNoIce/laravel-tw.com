@@ -18,17 +18,17 @@ return [
     ],
 
     'frontend' => [
-        'contact' => 'Contact',
+        'contact' => '聯絡我們',
         'dashboard' => '儀表板',
-        'login' => '登錄',
-        'macros' => '宏',
+        'login' => '登入',
+        'macros' => '指令集',
         'register' => '註冊',
 
         'user' => [
-            'account' => '我的帳戶',
+            'account' => '我的帳號',
             'administration' => '管理',
             'change_password' => '更改密碼',
-            'my_information' => '我的信息',
+            'my_information' => '我的訊息',
             'profile' => '個人資料',
         ],
     ],

@@ -37,7 +37,7 @@ class UserRepositoryTest extends TestCase
             'last_name' => 'Doe',
             'email' => 'john@example.com',
             'timezone' => 'UTC',
-            'password' => 'secret',
+            'password' => 'PASS@word1234',
             'roles' => ['test-role'],
         ], $userData);
     }
