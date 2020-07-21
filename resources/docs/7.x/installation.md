@@ -19,15 +19,18 @@ Laravel 框架有一些系統上的需求。當然，[Laravel Homestead](/docs/{
 然而如果您不使用 [Laravel Homestead](/docs/{{version}}/homestead)，則需要確保您的伺服器符合下列要求：
 
 <div class="content-list" markdown="1">
-- PHP >= 7.2.5
-- BCMath PHP Extension
-- Ctype PHP Extension
-- JSON PHP Extension
-- Mbstring PHP Extension
-- OpenSSL PHP Extension
-- PDO PHP Extension
-- Tokenizer PHP Extension
-- XML PHP Extension
+    <ul>
+        <li>PHP >= 7.2.5</li>
+        <li>BCMath PHP Extension</li>
+        <li>Ctype PHP Extension</li>
+        <li>Fileinfo PHP extension</li>
+        <li>JSON PHP Extension</li>
+        <li>Mbstring PHP Extension</li>
+        <li>OpenSSL PHP Extension</li>
+        <li>PDO PHP Extension</li>
+        <li>Tokenizer PHP Extension</li>
+        <li>XML PHP Extension</li>
+    </ul>
 </div>
 
 <a name="installing-laravel"></a>
@@ -44,8 +47,11 @@ Laravel 使用 [Composer](https://getcomposer.org) 來管理相依套件，所�
 請確定把 `$HOME/.composer/vendor/bin` 路徑放置於環境變數 `$PATH` 裡，這樣您的系統才能找到 Laravel 執行檔，這個路徑會根據您的作業系統而有不同的位址，然而，一些常見的位址包括：
 
 <div class="content-list" markdown="1">
-- macOS 以及 GNU / Linux 發行版: `$HOME/.composer/vendor/bin`
-- Windows: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
+<ul>
+<li>macOS: <code class=" language-php"><span class="token variable">$HOME</span><span class="token operator">/</span><span class="token punctuation">.</span>composer<span class="token operator">/</span>vendor<span class="token operator">/</span>bin</code></li>
+<li>Windows: <code class=" language-php"><span class="token operator">%</span><span class="token constant">USERPROFILE</span><span class="token operator">%</span>\<span class="token package">AppData<span class="token punctuation">\</span>Roaming<span class="token punctuation">\</span>Composer<span class="token punctuation">\</span>vendor<span class="token punctuation">\</span>bin</span></code></li>
+<li>GNU / Linux Distributions: <code class=" language-php"><span class="token variable">$HOME</span><span class="token operator">/</span><span class="token punctuation">.</span>config<span class="token operator">/</span>composer<span class="token operator">/</span>vendor<span class="token operator">/</span>bin</code> or <code class=" language-php"><span class="token variable">$HOME</span><span class="token operator">/</span><span class="token punctuation">.</span>composer<span class="token operator">/</span>vendor<span class="token operator">/</span>bin</code></li>
+</ul>
 </div>
 
 一旦安裝完成後，就可以使用 `laravel new` 指令在指定的目錄建立一份全新安裝的 Laravel。例如：`laravel new blog` 將會建立一個名稱為 `blog` 的目錄，裡面存放著全新安裝的 Laravel 和相依程式碼：
@@ -94,9 +100,11 @@ Laravel 幾乎不需設定就可以馬上使用，您可以自由的開始開發
 您也可以設定 Laravel 的幾個附加元件，像是：
 
 <div class="content-list" markdown="1">
-- [快取](/docs/{{version}}/cache#configuration)
-- [資料庫](/docs/{{version}}/database#configuration)
-- [Session](/docs/{{version}}/session#configuration)
+    <ul>
+        <li><a href="/docs/7.x/cache#configuration">快取 Cache</a></li>
+        <li><a href="/docs/7.x/database#configuration">資料庫 Database</a></li>
+        <li><a href="/docs/7.x/session#configuration">Session</a></li>
+    </ul>
 </div>
 
 <a name="web-server-configuration"></a>
