@@ -1,5 +1,4 @@
-const mix_frontend = require('laravel-mix');
-const mix_backend = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,19 +10,15 @@ const mix_backend = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
-mix_frontend
-    .js('resources/js/frontend/app.js', 'public/js/app.js')
-    .sass('resources/sass/frontend/app.scss', 'public/css')
-    .version();
-
-mix_backend
+mix
     .setPublicPath('public')
     .setResourceRoot('../') // Turns assets paths in css relative to css file
     // .options({
     //     processCssUrls: false,
     // })
+    .sass('resources/sass/frontend/app.scss', 'css/frontend.css')
     .sass('resources/sass/backend/app.scss', 'css/backend.css')
+    .js('resources/js/frontend/app.js', 'js/frontend.js')
     .js([
         'resources/js/backend/before.js',
         'resources/js/backend/app.js',
@@ -40,8 +35,8 @@ mix_backend
     ])
     .sourceMaps();
 
-if (mix_backend.inProduction()) {
-    mix_backend.version()
+if (mix.inProduction()) {
+    mix.version()
         .options({
             // Optimize JS minification process
             terser: {
@@ -52,7 +47,7 @@ if (mix_backend.inProduction()) {
         });
 } else {
     // Uses inline source-maps on development
-    mix_backend.webpackConfig({
+    mix.webpackConfig({
         devtool: 'inline-source-map'
     });
 }

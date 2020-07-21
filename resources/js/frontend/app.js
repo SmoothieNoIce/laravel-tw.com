@@ -1,9 +1,4 @@
-console.log('HI-00');
-
 $(document).ready(function () {
-
-    console.log('HI-01');
-
     // Navigation Menu opener for small screens...
     $(".nav_trigger").click(function (e) {
         e.preventDefault();

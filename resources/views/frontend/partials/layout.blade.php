@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/ins2wgm.css">
 
     <!-- Load styles -->
-    <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
+    {{ style(mix('css/frontend.css')) }}
 
     <!-- Load JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -178,7 +178,9 @@
 
     @include('frontend.partials.algolia_template')
 
-    <script src="{{ mix('js/app.js') }}"></script>
+    {!! script(mix('js/manifest.js')) !!}
+    {!! script(mix('js/vendor.js')) !!}
+    {!! script(mix('js/frontend.js')) !!}
 
     <script>
         var _gaq = [
