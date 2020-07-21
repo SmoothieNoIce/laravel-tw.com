@@ -63,7 +63,7 @@ class DocsController extends Controller
             $otherVersions = $this->docs->versionsContainingPage($page);
 
             return response()->view('frontend.docs', [
-                'title' => 'Page not found',
+                'title' => '喔靠！我找不到你要的東西 :(',
                 'index' => $this->docs->getIndex($version),
                 'content' => view('frontend.docs-missing', [
                     'otherVersions' => $otherVersions,
