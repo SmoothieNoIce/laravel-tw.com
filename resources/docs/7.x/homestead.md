@@ -57,29 +57,32 @@ Homestead 可以在任何 Windows、Mac 或 Linux 系統上面執行，裡面包
 </style>
 
 <div id="software-list" markdown="1">
-- Ubuntu 18.04
-- Git
-- PHP 7.3
-- PHP 7.2
-- PHP 7.1
-- PHP 7.0
-- PHP 5.6
-- Nginx
-- MySQL
-- lmm for MySQL or MariaDB database snapshots
-- Sqlite3
-- PostgreSQL
-- Composer
-- Node (With Yarn, Bower, Grunt, and Gulp)
-- Redis
-- Memcached
-- Beanstalkd
-- Mailhog
-- avahi
-- ngrok
-- Xdebug
-- XHProf / Tideways / XHGui
-- wp-cli
+    <ul>
+        <li>Ubuntu 18.04</li>
+        <li>Git</li>
+        <li>PHP 7.4</li>
+        <li>PHP 7.3</li>
+        <li>PHP 7.2</li>
+        <li>PHP 7.1</li>
+        <li>PHP 7.0</li>
+        <li>PHP 5.6</li>
+        <li>Nginx</li>
+        <li>MySQL</li>
+        <li>lmm for MySQL or MariaDB database snapshots</li>
+        <li>Sqlite3</li>
+        <li>PostgreSQL (9.6, 10, 11, 12)</li>
+        <li>Composer</li>
+        <li>Node (With Yarn, Bower, Grunt, and Gulp)</li>
+        <li>Redis</li>
+        <li>Memcached</li>
+        <li>Beanstalkd</li>
+        <li>Mailhog</li>
+        <li>avahi</li>
+        <li>ngrok</li>
+        <li>Xdebug</li>
+        <li>XHProf / Tideways / XHGui</li>
+        <li>wp-cli</li>
+    </ul>
 </div>
 
 <a name="optional-software"></a>
@@ -94,30 +97,32 @@ Homestead 可以在任何 Windows、Mac 或 Linux 系統上面執行，裡面包
 </style>
 
 <div id="software-list" markdown="1">
-- Apache
-- Blackfire
-- Cassandra
-- Chronograf
-- CouchDB
-- Crystal & Lucky Framework
-- Docker
-- Elasticsearch
-- Gearman
-- Go
-- Grafana
-- InfluxDB
-- MariaDB
-- MinIO
-- MongoDB
-- MySQL 8
-- Neo4j
-- Oh My Zsh
-- Open Resty
-- PM2
-- Python
-- RabbitMQ
-- Solr
-- Webdriver & Laravel Dusk Utilities
+    <ul>
+        <li>Apache</li>
+        <li>Blackfire</li>
+        <li>Cassandra</li>
+        <li>Chronograf</li>
+        <li>CouchDB</li>
+        <li>Crystal &amp; Lucky Framework</li>
+        <li>Docker</li>
+        <li>Elasticsearch</li>
+        <li>Gearman</li>
+        <li>Go</li>
+        <li>Grafana</li>
+        <li>InfluxDB</li>
+        <li>MariaDB</li>
+        <li>MinIO</li>
+        <li>MongoDB</li>
+        <li>MySQL 8</li>
+        <li>Neo4j</li>
+        <li>Oh My Zsh</li>
+        <li>Open Resty</li>
+        <li>PM2</li>
+        <li>Python</li>
+        <li>RabbitMQ</li>
+        <li>Solr</li>
+        <li>Webdriver &amp; Laravel Dusk Utilities</li>
+    </ul>
 </div>
 
 <a name="installation-and-setup"></a>
@@ -146,9 +151,7 @@ Homestead 可以在任何 Windows、Mac 或 Linux 系統上面執行，裡面包
 
 #### 安裝 Homestead
 
-你可以通过克隆代码来安装 Homestead。建议将代码克隆到你的「home」目录下的 Homestead 文件夹中，这样 Homestead box 就可以作为你的所有 Laravel 项目的主机：
-
-您可以通過將儲存庫 clone 到主機上來安裝 Homestead，建議將程式碼 clone 到你的「home」目錄下的 `Homestead` 資料夾當中，這樣 Homestead box 就可以作為你的所有 Laravel 項目的主機：
+你可以透過將程式碼 clone 到主機上來安裝 Homestead，建議將程式碼複製到您的「home」目錄下的 `Homestead` 資料夾當中，這樣 Homestead box 就可以作為你所有 Laravel 專案的主機。
 
     git clone https://github.com/laravel/homestead.git ~/Homestead
 
@@ -170,8 +173,6 @@ Homestead 可以在任何 Windows、Mac 或 Linux 系統上面執行，裡面包
 ### 設定 Homestead
 
 #### 設定提供者
-
-The `provider` key in your `Homestead.yaml` file indicates which Vagrant provider should be used: `virtualbox`, `vmware_fusion`, `vmware_workstation`, `parallels` or `hyperv`. You may set this to the provider you prefer:
 
 在 `Homestead.yaml` 檔案中的 `provider` 是用來設定想要使用哪一個 Vagrant 提供者，像是：`virtualbox`, `vmware_fusion`, `vmware_workstation`, `parallels` 以及 `hyperv`，你可以根據你的喜好來設定它們：
 
@@ -385,8 +386,6 @@ Windows:
 <a name="database-backups"></a>
 ### 備份資料庫
 
-當您的“無家可歸”盒子被破壞時，Homestead可以自動備份數據庫。 要使用此功能，您必須使用Vagrant 2.1.0或更高版本。 或者，如果您使用的是舊版的Vagrant，則必須安裝`vagrant-triggers`插件。 要啟用自動數據庫備份，請將以下行添加到“ Homestead.yaml”文件中：
-
 Homestead 可以自動備份資料庫，當您的 Vagrant box 被破壞時，資料不會跟著一去不復返，如果要使用這項功能，你必須使用 Vagrant 2.1.0 或更高版本。或者，如果你使用的是舊版的 Vagrant，則必須安裝 `vagrant-triggers` 套件，要啟用自動備份資料庫，請將以下指令添加到 `Homestead.yaml` 文件當中。
 
     backup: true
@@ -535,15 +534,17 @@ Minio 是一項開源的物件儲存伺服器，並且提供了與 Amazon S3 兼
 以下的連接埠預設將會被轉發至 Homestead 環境：
 
 <div class="content-list" markdown="1">
-- **SSH:** 2222 &rarr; 轉發到 22
-- **ngrok UI:** 4040 &rarr; 轉發到 4040
-- **HTTP:** 8000 &rarr; 轉發到 80
-- **HTTPS:** 44300 &rarr; 轉發到 443
-- **MySQL:** 33060 &rarr; 轉發到 3306
-- **PostgreSQL:** 54320 &rarr; 轉發到 5432
-- **MongoDB:** 27017 &rarr; 轉發到 27017
-- **Mailhog:** 8025 &rarr; 轉發到 8025
-- **Minio:** 9600 &rarr; 轉發到 9600
+    <ul>
+        <li><strong>SSH:</strong> 2222 → 轉發到 22</li>
+        <li><strong>ngrok UI:</strong> 4040 → 轉發到 4040</li>
+        <li><strong>HTTP:</strong> 8000 → 轉發到 80</li>
+        <li><strong>HTTPS:</strong> 44300 → 轉發到 443</li>
+        <li><strong>MySQL:</strong> 33060 → 轉發到 3306</li>
+        <li><strong>PostgreSQL:</strong> 54320 → 轉發到 5432</li>
+        <li><strong>MongoDB:</strong> 27017 → 轉發到 27017</li>
+        <li><strong>Mailhog:</strong> 8025 → 轉發到 8025</li>
+        <li><strong>Minio:</strong> 9600 → 轉發到 9600</li>
+    </ul>
 </div>
 
 #### 轉發到其他連接埠
@@ -560,9 +561,9 @@ Minio 是一項開源的物件儲存伺服器，並且提供了與 Amazon S3 兼
 <a name="sharing-your-environment"></a>
 ### 共享環境變數
 
-有時候你可能會希望和合作夥伴分享你現在的工作環境或者分享到一個client上。Vagrant有一個內建的方法，透過 `vagrant share` 支援這個功能;然而，如果你有多個網站同時使用你的 `Homestead.yaml` 檔案，這功能將無法使用。
+有時候您可能會希望和合作夥伴分享您現在的工作環境，亦或者是分享到另一個 client 端上，Vagrant 有一個內建的方法，透過 `vagrant share` 這個功能，然而如果您有多個網站同時使用您的 `Homestead.yaml` 檔案，這項功能將無法使用。
 
-要解決這個問題，Homestead 加入了自己的 `share` 指令。開始前，透過 `vagrant ssh` 連線到你的 Homestead 機器然後執行 `share homestead.test。這會從你的` `Homestead.yaml` 分享 `homestead.test` 網站。當然，你可以將 `homestead.test` 替換成任何其他網站。
+要解決這個問題，Homestead 加入了自己的 `share` 指令。開始前，透過 `vagrant ssh` 連線到你的 Homestead 機器然後執行 `share homestead.test`。這會從你的 `Homestead.yaml` 分享 `homestead.test` 網站。當然，你可以將 `homestead.test` 替換成任何其他網站。
 
     share homestead.test
 
@@ -633,10 +634,7 @@ Homestead 內建了 [Xdebug](https://xdebug.org) 提供逐步測試的功能。�
 
 #### 自動啟動 Xdebug
 
-
-当发送请求到 Web 服务器调试功能测试时，自动启动调试比修改测试通过自定义请求头或者 Cookie 来触发调试要轻松许多。要设置 Xdebug 自动启动，可以在虚拟机中编辑 /etc/php/7.#/fpm/conf.d/20-xdebug.ini 添加如下配置来完成：
-
-When debugging functional tests that make requests to the web server, it is easier to autostart debugging rather than modifying tests to pass through a custom header or cookie to trigger debugging. To force Xdebug to start automatically, modify `/etc/php/7.x/fpm/conf.d/20-xdebug.ini` inside your Vagrant box and add the following configuration:
+當發送請求到 Web 伺服器調整功能測試時，自動啟動調整比透過修改測試通過自訂請求標頭或者 Cookie 來觸發調整來得更容易。要設定 Xdebug 自動啟動，可以在 Homestead 虛擬機當中編輯 `/etc/php/7.x/fpm/conf.d/20-xdebug.ini` 這份檔案，並且新增以下設定來完成：
 
     ; If Homestead.yml contains a different subnet for the IP address, this address may be different...
     xdebug.remote_host = 192.168.10.1
@@ -645,11 +643,12 @@ When debugging functional tests that make requests to the web server, it is easi
 <a name="profiling-applications-with-blackfire"></a>
 ### 使用 Blackfire 對應用程式進行效能分析
 
-[Blackfire](https://blackfire.io/docs/introduction) is a SaaS service for profiling web requests and CLI applications and writing performance assertions. It offers an interactive user interface which displays profile data in call-graphs and timelines. It is built for use in development, staging, and production, with no overhead for end users. It provides performance, quality, and security checks on code and `php.ini` configuration settings.
 
-The [Blackfire Player](https://blackfire.io/docs/player/index) is an open-source Web Crawling, Web Testing and Web Scraping application which can work jointly with Blackfire in order to script profiling scenarios.
+[Blackfire](https://blackfire.io/docs/introduction) 是一個用來分析 Web 請求和 CLI 應用以及撰寫性能測試的 Saas 服務，它提供了一個具有互動式的介面來顯示調用關係圖和時間線中的資料，可以在開發、預覽和正式環境中使用，對終端使用者來說沒有額外開銷，我們可以透過它來實現程式碼和 `php.ini` 配置的性能、效能和安全檢查。
 
-To enable Blackfire, use the "features" setting in your Homestead configuration file:
+[Blackfire Player](https://blackfire.io/docs/player/index) 是一個開源且功能強大的 Web 爬蟲、測試和資料擷取工具，可以和 `Blackfire` 用於指令分析情境。
+
+要啟用 Blackfire，需要使用 Homestead 設定文件的 features 配置項目來設置：
 
     features:
         - blackfire:
@@ -658,11 +657,11 @@ To enable Blackfire, use the "features" setting in your Homestead configuration 
             client_id: "client_id"
             client_token: "client_value"
 
-Blackfire server credentials and client credentials [require a user account](https://blackfire.io/signup). Blackfire offers various options to profile an application, including a CLI tool and browser extension. Please [review the Blackfire documentation for more details](https://blackfire.io/docs/cookbooks/index).
+獲得 Blackfire 伺服器憑證和使用者端憑證需要[註冊帳號](https://blackfire.io/signup)，Blackfire 提供了多個解決方案來分析應用，包括一個使用者端工具和瀏覽器插件，更多詳細資料請[參考 Blackfire 官方文件](https://blackfire.io/docs/cookbooks/index)。
 
-### Profiling PHP Performance Using XHGui
+### 使用 XHGui 分析 PHP 效能
 
-[XHGui](https://www.github.com/perftools/xhgui) is a user interface for exploring the performance of your PHP applications. To enable XHGui, add `xhgui: 'true'` to your site configuration:
+[XHGui](https://www.github.com/perftools/xhgui) 是一個用來檢視 PHP 應用程式效能的圖形化介面，需要結合 XHProf 來使用，要啟用 XHGui，需要在站點設定當中新增 `xhgui: 'true'` 設定：
 
     sites:
         -
@@ -671,74 +670,75 @@ Blackfire server credentials and client credentials [require a user account](htt
             type: "apache"
             xhgui: 'true'
 
-If the site already exists, make sure to run `vagrant provision` after updating your configuration.
+如果站點本身已經存在，更新設定之後需要執行 `vagrant provision` 指令來使其生效。
 
-To profile a web request, add `xhgui=on` as a query parameter to a request. XHGui will automatically attach a cookie to the response so that subsequent requests do not need the query string value. You may view your application profile results by browsing to `http://your-site.test/xhgui`.
+要分析一個 Web 請求，需要新增 `xhgui=on` 到查詢字串作為請求參數，XHGui 會自動添加 Cookie 到響應當中，以便後續請求不再需要添加查詢字串，你可以瀏覽 `http://your-site.test/xhgui` 來查看應用程式分析的結果。
 
-To profile a CLI request using XHGui, prefix the command with `XHGUI=on`:
+要使用 XHGui 分析一個 CLI 請求，需要在指令之前加上 XHGUI=on 前綴詞：
 
     XHGUI=on path/to/script
 
-CLI profile results may be viewed in the same way as web profile results.
+CLI 分析結果可以通過和 Web 分析結果一樣的方式來查看。
 
-Note that the act of profiling slows down script execution, and absolute times may be as much as twice as real-world requests. Therefore, always compare percentage improvements and not absolute numbers. Also, be aware the execution time includes any time spent paused in a debugger.
+注意以上分析行為會使程式碼執行速度變慢，甚至會導致效能降低一半，因此，我們通常會按照百分比選取一小部分的樣本進行分析，並根據分析結果進行改進，此外，注意分析結果中的執行時間，其包含了測試中花費的所有時間。
 
-Since performance profiles take up significant disk space, they are deleted automatically after a few days.
+由於效能分析會耗費大量的硬碟空間，它們會在幾天之後被自動刪除。
 
 <a name="network-interfaces"></a>
-## Network Interfaces
+## 網路介面卡
 
-The `networks` property of the `Homestead.yaml` configures network interfaces for your Homestead environment. You may configure as many interfaces as necessary:
+`Homestead.yaml` 中的 `networks` 屬性為 Homestead 環境設定網路端點，你可以根據需求設定多個端點：
 
     networks:
         - type: "private_network"
           ip: "192.168.10.20"
 
-To enable a [bridged](https://www.vagrantup.com/docs/networking/public_network.html) interface, configure a `bridge` setting and change the network type to `public_network`:
+要開啟一個[橋接](https://www.vagrantup.com/docs/networking/public_network.html)端點，需要設定 `bridge` 將其修改網路型態為 `public_network`：
 
     networks:
         - type: "public_network"
           ip: "192.168.10.20"
           bridge: "en1: Wi-Fi (AirPort)"
 
-To enable [DHCP](https://www.vagrantup.com/docs/networking/public_network.html), just remove the `ip` option from your configuration:
+要開啟 [DHCP](https://www.vagrantup.com/docs/networking/public_network.html)，只需要從設定中移除 `ip` 選項即可：
 
     networks:
         - type: "public_network"
           bridge: "en1: Wi-Fi (AirPort)"
 
 <a name="extending-homestead"></a>
-## Extending Homestead
+## 擴展 Homestead
 
-You may extend Homestead using the `after.sh` script in the root of your Homestead directory. Within this file, you may add any shell commands that are necessary to properly configure and customize your virtual machine.
+你可以使用 Homestead 根目錄下的 `after.sh` 檔案來擴展 Homestead 的功能，在這個檔案中，你可以任意添加 shell 指定來設定和自定義您的虛擬機。
 
-When customizing Homestead, Ubuntu may ask you if you would like to keep a package's original configuration or overwrite it with a new configuration file. To avoid this, you should use the following command when installing packages to avoid overwriting any configuration previously written by Homestead:
+當自訂 Homestead 時，Ubuntu 可能會詢問你是否要保留專案的原始配置，還是用一個新的設定檔案來覆蓋它，為了避免這種情況發生，您應該在安裝時使用以下指令，以避免覆蓋之前由 Homestead 撰寫的任何設定：
 
     sudo apt-get -y \
         -o Dpkg::Options::="--force-confdef" \
         -o Dpkg::Options::="--force-confold" \
         install your-package
 
-### User Customizations
+### 使用者自訂
 
-When using Homestead in a team setting, you may want to tweak Homestead to better fit your personal development style. You may create a `user-customizations.sh` file in the root of your Homestead directory (The same directory containing your `Homestead.yaml`). Within this file, you may make any customization you would like; however, the `user-customizations.sh` should not be version controlled.
+在團隊環境中使用 Homestead 時，您可能會想要調整 Homestead 以便更好地適應您自己喜好的個人開發風格，這可以通過在 Homestead 根目錄下建立 `user-customizations.sh` 檔案來完成，在這個檔案中，您可以做一些自己喜歡的客製化設定；不過，需要注意不要把 `user-customizations.sh` 部署到 repo 當中。
 
 <a name="updating-homestead"></a>
 ## 更新 Homestead
 
-Before you begin updating Homestead ensure you have removed your current virtual machine by running the following command in your Homestead directory:
+更新 Homestead 之前，請確保您已經在 Homestead 目錄下通過如下指令移除當前的虛擬機：
 
     vagrant destroy
 
-Next, you need to update the Homestead source code. If you cloned the repository you can run the following commands at the location you originally cloned the repository:
+接下來，需要更新 Homestead 原始碼，如果您已經 clone repo 到本機端，可以在專案跟目錄下執行以下指令來進行更新：
 
     git fetch
 
     git pull origin release
 
-These commands pull the latest Homestead code from the GitHub repository, fetches the latest tags, and then checks out the latest tagged release. You can find the latest stable release version on the [GitHub releases page](https://github.com/laravel/homestead/releases).
 
-如果你是透過 `composer.json` 文件來安裝 Homestead，那麼你應該確保你的 `composer.json` 文件中包含 `"laravel/homestead": "^9"` 並更新你的依賴套件：
+這些命令從 GitHub repo 拉取最新的 Homestead 程式碼，獲取最新的發佈版本，您可以在 [GitHub 發佈頁面](https://github.com/laravel/homestead/releases) 找到最穩定的版本。
+
+如果你是透過 `composer.json` 文件來安裝 Homestead，那麼你應該確保你的 `composer.json` 文件中包含 `"laravel/homestead": "^10"` 並更新你的依賴套件：
 
     composer update
 
