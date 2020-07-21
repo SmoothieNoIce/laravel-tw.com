@@ -44,7 +44,7 @@
                         </div>
                         <div class="search_contain">
                             <div class="input_group search icon">
-                                <input type="text" class="search_input" id="search-docs-input" placeholder="Search Docs" aria-label="Search in the documentation">
+                                <input type="text" class="search_input" id="search-docs-input" placeholder="搜尋文件" aria-label="搜尋整份文件">
                                 <input type="submit" class="search_submit icon_display">
                             </div>
                         </div>
