@@ -1,50 +1,50 @@
-# Release Notes
+# 發行說明
 
-- [Versioning Scheme](#versioning-scheme)
-- [Support Policy](#support-policy)
+- [版本計劃](#versioning-scheme)
+- [支援政策](#support-policy)
 - [Laravel 7](#laravel-7)
 
 <a name="versioning-scheme"></a>
-## Versioning Scheme
+## 版本計劃
 
-Laravel and its other first-party packages follow [Semantic Versioning](https://semver.org). Major framework releases are released every six months (~February and ~August), while minor and patch releases may be released as often as every week. Minor and patch releases should **never** contain breaking changes.
+Laravel 及其他第一方擴充包遵循 [Semantic Versioning](https://semver.org)，主要版本每六個月（~二月、~八月）發行一次，次要版本和補丁版本可能每週發佈一次，次要和補修版本**不會**包含非兼容性更改。
 
-When referencing the Laravel framework or its components from your application or package, you should always use a version constraint such as `^7.0`, since major releases of Laravel do include breaking changes. However, we strive to always ensure you may update to a new major release in one day or less.
+引入 Laravel 框架或其組件時，應該保持使用版本約束，像是 `^7.0`，因為 Laravel 的主要版本確實包含非兼容性更改，我們會努力確保您可以在一天或更短的時間內更新到最新的版本。
 
 <a name="support-policy"></a>
-## Support Policy
+## 支援政策
 
-For LTS releases, such as Laravel 6, bug fixes are provided for 2 years and security fixes are provided for 3 years. These releases provide the longest window of support and maintenance. For general releases, bug fixes are provided for 6 months and security fixes are provided for 1 year. For all additional libraries, including Lumen, only the latest release receives bug fixes. In addition, please review the database versions [supported by Laravel](/docs/{{version}}/database#introduction).
+對於 LTS 版本，例如 Laravel 6，提供了 2 年的錯誤修復和 3 年的安全更新，這些版本提供了最長的支援和維護，對於一般的發佈版本，只提供了 6 個月的錯誤修復和 1 年的安全更新，對於包括 Lumen 在內的所有其他版本，只有最新版本才會修復錯誤。此外，請查看 Laravel [支援的](/docs/{{version}}/database#introduction) 資料庫版本。
 
-| Version | Release | Bug Fixes Until | Security Fixes Until |
+| 版本 | 發佈日期 | 錯誤修復支援到 | 安全更新支援到 |
 | --- | --- | --- | --- |
-| 5.5 (LTS) | August 30th, 2017 | August 30th, 2019 | August 30th, 2020 |
-| 5.6 | February 7th, 2018 | August 7th, 2018 | February 7th, 2019 |
-| 5.7 | September 4th, 2018 | March 4th, 2019 | September 4th, 2019 |
-| 5.8 | February 26th, 2019 | August 26th, 2019 | February 26th, 2020 |
-| 6 (LTS) | September 3rd, 2019 | September 3rd, 2021 | September 3rd, 2022 |
-| 7 | March 3rd, 2020 | September 3rd, 2020 | March 3rd, 2021 |
+| 5.5 (LTS) | 2017 年 8 月 30 日 | 2019 年 8 月 30 日 | 2020 年 8 月 30 日 |
+| 5.6 | 2018 年 2 月 7 日 | 2018 年 8 月 7 日 | 2019 年 2 月 7 日 |
+| 5.7 | 2018 年 9 月 4 日 | 2019 年 3 月 4 日 | 2019 年 9 月 4 日 |
+| 5.8 | 2019 年 2 月 26 日 | 2019年 8 月 26 日 | 2020 年 2 月 26 日 |
+| 6 (LTS) | 2019 年 9 月 3 日 | 2021 年 9 月 3 日 | 2022 年 9 月 3 日 |
+| 7 | 2020 年 3 月 3 日 | 2020 年 9 月 3 日 | 2021 年 3 月 3 日 |
 
 <a name="laravel-7"></a>
 ## Laravel 7
 
-Laravel 7 continues the improvements made in Laravel 6.x by introducing Laravel Sanctum, routing speed improvements, custom Eloquent casts, Blade component tags, fluent string operations, a developer focused HTTP client, first-party CORS support, improved scoping for route model binding, stub customization, database queue improvements, multiple mail drivers, query-time casts, a new `artisan test` command, and a variety of other bug fixes and usability improvements.
+Laravel 7 透過引用 Laravel Sanctum、提高路由速度、自訂 Eloquent 強制轉換(casts)、Blade 元件標籤、流暢的字元操作、開發人員專用的 HTTP Client 端、第一方 CORS 支援、改善路由模組綁定作用域、存跟自訂、改善資料庫列隊、多信箱驅動、查詢時間強制轉換(casts)、新的 `artisan test` 指令，以及各種其他錯誤修復和使用性改善，並對 Laravel 6.x 持續繼續進行優化。
 
 ### Laravel Sanctum
 
-_Laravel Sanctum was built by [Taylor Otwell](https://github.com/taylorotwell)_.
+_Laravel Sanctum 由 [Taylor Otwell](https://github.com/taylorotwell) 所創造。_
 
-Laravel Sanctum provides a featherweight authentication system for SPAs (single page applications), mobile applications, and simple, token based APIs. Sanctum allows each user of your application to generate multiple API tokens for their account. These tokens may be granted abilities / scopes which specify which actions the tokens are allowed to perform.
+Laravel Sanctum 為單頁應用(Single-page application)，行動裝置應用程式和基於 Token 的簡單 API 提供了輕巧的身份驗證系統，Sanctum 允許應用程式的每個使用者產生多個 API Token，這些 Token 可以被授與權限或作用域，用於指定允許 Token 執行哪些動作。
 
-For more information on Laravel Sanctum, consult the [Sanctum documentation](/docs/{{version}}/sanctum).
+有關 Laravel Sanctum 的更多訊息，請翻閱 [Sanctum 文件](/docs/{{version}}/sanctum)。
 
-### Custom Eloquent Casts
+### 自訂 Eloquent 強制轉換(casts)
 
-_Custom Eloquent casts was contributed by [Taylor Otwell](https://github.com/taylorotwell)_.
+_自訂 Eloquent 強制轉換(casts) 由 [Taylor Otwell](https://github.com/taylorotwell) 所開發貢獻。_
 
-Laravel has a variety of built-in, helpful cast types; however, you may occasionally need to define your own cast types. You may now accomplish this by defining a class that implements the `CastsAttributes` interface.
+Laravel 內建了多種常用的型態轉換，但是，使用者偶爾會需要將資料轉換成自訂義類型。現在，該需求可以透過定義一個實作 `CastsAttributes` 端口的類型來完成。
 
-Classes that implement this interface must define a `get` and `set` methods. The `get` method is responsible for transforming a raw value from the database into a cast value, while the `set` method should transform a cast value into a raw value that can be stored in the database. As an example, we will re-implement the built-in `json` cast type as a custom cast type:
+實作了該端口的類型必須事先定義一個 `get` 和 `set` 的方法。`get` 方法負責將資料庫中獲得的原始資料轉換成對應的類型，而 `set` 方法則是將資料轉換成對應的資料庫類型，以便存入資料庫當中，舉例來說，下面我們將內置的 `json` 類型轉換以自訂義類型形式重新實現一次：
 
     <?php
 
@@ -83,7 +83,7 @@ Classes that implement this interface must define a `get` and `set` methods. The
         }
     }
 
-Once you have defined a custom cast type, you may attach it to a model attribute using its class name:
+定義好自訂義類型轉換後，可以省用其類別名稱將其附加到 Model 的 casts 屬性當中：
 
     <?php
 
@@ -104,17 +104,17 @@ Once you have defined a custom cast type, you may attach it to a model attribute
         ];
     }
 
-To learn how to write custom Eloquent casts, including custom casts that cast to value objects, please consult the [Eloquent documentation](/docs/{{version}}/eloquent-mutators#custom-casts).
+要學習如何實現自訂義 Eloquent 類型轉換，包括轉換成特定值對象的類型轉換，請參考 [Eloquent 文件](/docs/{{version}}/eloquent-mutators#custom-casts)。
 
-### Blade Component Tags & Improvements
+### Blade 元件標籤 & 改進措施
 
-_Blade component tags were contributed by [Spatie](https://spatie.be/), [Marcel Pociot](https://twitter.com/marcelpociot), [Caleb Porzio](https://twitter.com/calebporzio), [Dries Vints](https://twitter.com/driesvints), and [Taylor Otwell](https://github.com/taylorotwell)_.
+_Blade 元件標籤貢獻人員有 [Spatie](https://spatie.be/), [Marcel Pociot](https://twitter.com/marcelpociot), [Caleb Porzio](https://twitter.com/calebporzio), [Dries Vints](https://twitter.com/driesvints) 和 [Taylor Otwell](https://github.com/taylorotwell)。_
 
-> {tip} Blade components have been overhauled to allow tag based rendering, attribute management, component classes, inline view components, and more. Since the overhaul of Blade components is so extensive, please consult the [full Blade component documentation](/docs/{{version}}/blade#components) to learn about this feature.
+> {tip} Blade 元件經過修正後，以允許基於標籤的渲染、屬性管理、元件類別、內關聯視圖元件 ... 等等，由於 Blade 元件的檢修非常廣泛，因此請查看[完整的 Blade 文件](/docs/{{version}}/blade#components)以了解此功能。
 
-In summary, a component may now have an associated class which specifies the data it accepts. All public properties and methods defined on the component class will automatically be made available to the component view. Any additional HTML attributes specified on the component may be managed using the automatically included `$attributes` variable, which is an attribute bag instance.
+總而言之，現在的一個元件能從指定的類別取得資料，所有的公開屬性和方法都能清楚的定義在元件類別裡，會自動組裝成元件試圖，任何附加的 HTML 屬性都指定於一個可以自動管理的 `$attribute` 變數，它是一個屬性實作。
 
-In this example, we will assume that an `App\View\Components\Alert` component has been defined like so:
+下面舉個例子，我們會假設一個 `App\View\Components\Alert` 元件，其內容是這樣：
 
     <?php
 
@@ -125,14 +125,14 @@ In this example, we will assume that an `App\View\Components\Alert` component ha
     class Alert extends Component
     {
         /**
-         * The alert type.
+         * alert 提示類型
          *
          * @var string
          */
         public $type;
 
         /**
-         * Create the component instance.
+         * 建立元件實作
          *
          * @param  string  $type
          * @return void
@@ -143,7 +143,7 @@ In this example, we will assume that an `App\View\Components\Alert` component ha
         }
 
         /**
-         * Get the class for the given alert type.
+         * 獲得 alert 的提示類型
          *
          * @return string
          */
@@ -153,7 +153,7 @@ In this example, we will assume that an `App\View\Components\Alert` component ha
         }
 
         /**
-         * Get the view / contents that represent the component.
+         * 渲染該元件的視圖或內容。
          *
          * @return \Illuminate\View\View|string
          */
@@ -163,7 +163,7 @@ In this example, we will assume that an `App\View\Components\Alert` component ha
         }
     }
 
-And, assuming the component's Blade template has been defined like so:
+並且假設 Blade 元件模板定義是這樣：
 
     <!-- /resources/views/components/alert.blade.php -->
 
@@ -173,25 +173,25 @@ And, assuming the component's Blade template has been defined like so:
         {{ $slot }}
     </div>
 
-The component may be rendered in another Blade view using the component's tag:
+元件可以被渲染在另一個使用元件標籤的 Blade 視圖當中：
 
     <x-alert type="error" class="mb-4">
         <x-slot name="heading">
-            Alert content...
+            Alert 元件內容...
         </x-slot>
 
-        Default slot content...
+        預設內容 ...
     </x-alert>
 
-As mentioned, this is just a very small sample of the functionality of the Blade component overhaul in Laravel 7 and does not demonstrate anonymous components, inline view components, and a variety of other features. Please consult the [full Blade component documentation](/docs/{{version}}/blade#components) to learn about this feature.
+如前面所說，在大改之後的 Laravel 7 當中，這是一個非常小又普通的一個功能，而且還沒有實現匿名元件、內關聯視圖組建和各式各樣的其他特性，請從[所有 Blade 文件](/docs/{{version}}/blade#components)當中來了解這些新功能。
 
-> {note} The previous `@component` syntax for Blade components has not and will not be removed.
+> {note} 以前的 Blade 元件 `@component` 語法並沒有被移除。
 
-### HTTP Client
+### HTTP 使用者端
 
-_The HTTP client is a wrapper of Guzzle and was contributed by [Adam Wathan](https://twitter.com/adamwathan), [Jason McCreary](https://twitter.com/gonedark), and [Taylor Otwell](https://github.com/taylorotwell)_.
+_HTTP 使用者端是 Guzzle 的一個封裝，由 [Adam Wathan](https://twitter.com/adamwathan), [Jason McCreary](https://twitter.com/gonedark) 和 [Taylor Otwell](https://github.com/taylorotwell) 所提供。_
 
-Laravel now provides an expressive, minimal API around the [Guzzle HTTP client](http://docs.guzzlephp.org/en/stable/), allowing you to quickly make outgoing HTTP requests to communicate with other web applications. Laravel's wrapper around Guzzle is focused on its most common use cases and a wonderful developer experience. For example, the client makes it a breeze to `POST` and interface with JSON data:
+Laravel 現在提供一套圍繞 [Guzzle HTTP 使用者端](http://docs.guzzlephp.org/en/stable/) 所建立的精簡且高效能的 API 呼叫工具，你可以快速的向其他 Web 應用程式發起 HTTP 請求。Laravel 基於 Guzzle 的封裝專注於最常見的使用範例，以及良好的開發人員體驗。例如，使用者端發起帶 JSON 資料的 `POST` 請求可以變得非常簡單：
 
     use Illuminate\Support\Facades\Http;
 
@@ -204,7 +204,7 @@ Laravel now provides an expressive, minimal API around the [Guzzle HTTP client](
 
     return $response['id'];
 
-In addition, the HTTP client provides fantastic, ergonomic testing functionality:
+另外，HTTP 使用者端還提供了容易使用的測試功能：
 
     Http::fake([
         // Stub a JSON response for GitHub endpoints...
@@ -220,36 +220,37 @@ In addition, the HTTP client provides fantastic, ergonomic testing functionality
                                 ->pushStatus(404),
     ]);
 
-To learn more about all of the features of the HTTP client, please consult the [HTTP client documentation](/docs/{{version}}/http-client).
+要了解有關 HTTP 使用者端的所有功能，請瀏覽 [HTTP 使用者端文件](/docs/{{version}}/http-client)。
 
-### Fluent String Operations
+### 流暢的字元操作
 
-_Fluent string operations were contributed by [Taylor Otwell](https://twitter.com/taylorotwell)_.
+_流暢的字元操作由 [Taylor Otwell](https://twitter.com/taylorotwell) 所開發貢獻。_
 
-You are likely familiar with Laravel's existing `Illuminate\Support\Str` class, which provides a variety of helpful string manipulation functions. Laravel 7 now offers a more object-oriented, fluent string manipulation library built on top of these functions. You may create a fluent `Illuminate\Support\Stringable` object using the `Str::of` method. A variety of methods may then be chained onto the object to manipulate the string:
+您可能對 Laravel 本身已經擁有的 `Illuminate\Support\Str` 這個類別比較熟悉，它提供了各種有關於字串操作的函式，基於這些函式，Laravel 7 現在提供了一個更加面向物件的、更加流暢的字串操作，您可以使用 `Str::of` 方法來建立一個 `Illuminate\Support\Stringable` 物件，然後可以使用該物件的各種方法去運算字串。
 
     return (string) Str::of('  Laravel Framework 6.x ')
                         ->trim()
                         ->replace('6.x', '7.x')
                         ->slug();
 
-For more information on the methods available via fluent string manipulation, please consult its [full documentation](/docs/{{version}}/helpers#fluent-strings).
+有關流暢的字元操作的更多訊息，可以查看[所有文件](/docs/{{version}}/helpers#fluent-strings)。
 
-### Route Model Binding Improvements
+### 路由模型綁定以及優化
 
-_Route model binding improvements were contributed by [Taylor Otwell](https://twitter.com/taylorotwell)_.
+_路由模型綁定以及優化由 [Taylor Otwell](https://twitter.com/taylorotwell) 所開發貢獻。_
 
-#### Key Customization
+#### 路由自訂欄位關鍵字
 
-Sometimes you may wish to resolve Eloquent models using a column other than `id`. To do so, Laravel 7 allows you to specify the column in the route parameter definition:
+有時候，您可能希望使用 `id` 以外的欄位來獲得 Eloquent 模型，因此 Laravel 7 允許您在 route 參數中定義指定的欄位：
 
     Route::get('api/posts/{post:slug}', function (App\Post $post) {
         return $post;
     });
 
-#### Automatic Scoping
+#### 自動綁定約束
+隐式绑定约束
 
-Sometimes, when implicitly binding multiple Eloquent models in a single route definition, you may wish to scope the second Eloquent model such that it must be a child of the first Eloquent model. For example, consider this situation that retrieves a blog post by slug for a specific user:
+有時候，當你在路由中綁定多個 Eloquent 模型時，可能會希望對第二個 Eloquent 模型進行約束，使其必須是第一個 Eloquent 模型的子類別，例如，透過 Slug 欄位為特定使用者尋找部落格文章：
 
     use App\Post;
     use App\User;
@@ -258,41 +259,41 @@ Sometimes, when implicitly binding multiple Eloquent models in a single route de
         return $post;
     });
 
-When using a custom keyed implicit binding as a nested route parameter, Laravel 7 will automatically scope the query to retrieve the nested model by its parent using conventions to guess the relationship name on the parent. In this case, it will be assumed that the `User` model has a relationship named `posts` (the plural of the route parameter name) which can be used to retrieve the `Post` model.
+當你使用自訂義自動綁定約束作為路由參數時，Laravel 7 將自動綁定查詢範圍，以使用綁定其父類別上的關聯命名，以其父類別關聯模型，在這種情況之下，將 User 模型關聯了名為 posts(路由參數名稱的複數) 的關係，該關聯可用於搜尋 Post 模型。
 
-For more information on route model binding, please consult the [routing documentation](/docs/{{version}}/routing#route-model-binding).
+有關路由模型綁定的更多資訊，請瀏覽[路由文件](/docs/{{version}}/routing#route-model-binding)。
 
-### Multiple Mail Drivers
+### 多個信箱驅動程式
 
-_Multiple mail driver support was contributed by [Taylor Otwell](https://twitter.com/taylorotwell)_.
+_多個信箱驅動程式由 [Taylor Otwell](https://twitter.com/taylorotwell) 所開發貢獻。_
 
-Laravel 7 allows the configuration of multiple "mailers" for a single application. Each mailer configured within the `mail` configuration file may have its own options and even its own unique "transport", allowing your application to use different email services to send certain email messages. For example, your application might use Postmark to send transactional mail while using Amazon SES to send bulk mail.
+Laravel 7 允許為單個應用程式配置多個信箱驅動，在 mail 設定文件中的每個信箱驅動都擁有它們自己的以及自己獨特的「transport」，這允許您的應用程式使用不同的信箱服務來發送電子信件，例如，你的應用程式可以使用 `Postmark` 來發送大量電子信件，並且使用 `Amzon SES` 來發送公事電子信件。
 
-By default, Laravel will use the mailer configured as the `default` mailer in your `mail` configuration file. However, you may use the `mailer` method to send a message using a specific mailer configuration:
+預設情況之下，Laravel 將使用 mail 設定文件中的 `default` 作為信箱驅動，然而你可以透過 `mailer` 方法來使用特定的信箱驅動來發送電子信件。
 
     Mail::mailer('postmark')
             ->to($request->user())
             ->send(new OrderShipped($order));
 
-### Route Caching Speed Improvements
+### 路由快取速度改善
 
-_The route caching speed improvements were contributed by upstream [Symfony](https://symfony.com) contributors and [Dries Vints](https://twitter.com/driesvints)_.
+_路由快取速度改善由 [Symfony](https://symfony.com) 的貢獻者以及 [Dries Vints](https://twitter.com/driesvints) 所開發貢獻。_
 
-Laravel 7 includes a new method of matching compiled, cached routes that have been cached using the `route:cache` Artisan command. On large applications (for example, applications with 800 or more routes), these improvements can result in a **2x speed improvement** in requests per second on a simple "Hello World" benchmark. No changes to your application are required.
+Laravel 7 提供了一種新的方式，用於使用 Artisan 指令 `route:cache` 快取以編譯的暫存路由，在大型應用程式(例如具有 800 條或更多路由的應用程式)上，這些改善可以使簡單的「Hello World」基準測試每秒的請求速度**提高 2 倍**，而無需更改應用程式。
 
-### CORS Support
+### CORS 支援
 
-_CORS support was contributed by [Barry vd. Heuvel](https://twitter.com/barryvdh)_.
+_CORS 支援由 [Barry vd. Heuvel](https://twitter.com/barryvdh) 所開發貢獻。_
 
-Laravel 7 includes first-party support for configuring Cross-Origin Resource Sharing (CORS) `OPTIONS` request responses by integrating the popular Laravel CORS package written by Barry vd. Heuvel. A new `cors` configuration is included in the [default Laravel application skeleton](https://github.com/laravel/laravel/blob/develop/config/cors.php).
+Laravel 7 內建由 Barry vd. Heuvel 所開發的 Laravel CORS，為設定跨域資源共享(CORS) `OPTIONS` 呼叫提供了官方支援，[預設的 Laravel 應用程式框架](https://github.com/laravel/laravel/blob/develop/config/cors.php)中包含一個新的 cors 設定。
 
-For more information on CORS support in Laravel 7.x, please consult the [CORS documentation](/docs/{{version}}/routing#cors).
+有關於 Laravel 7.x 中的 CORS 支援的更多訊息，請翻閱 [CORS 文件](/docs/{{version}}/routing#cors)。
 
-### Query Time Casts
+### 查詢時間轉換
 
-_Query time casting was contributed by [Matt Barlow](https://github.com/mpbarlow)_.
+_查詢時間轉換由 [Matt Barlow](https://github.com/mpbarlow) 所開發貢獻。_
 
-Sometimes you may need to apply casts while executing a query, such as when selecting a raw value from a table. For example, consider the following query:
+有些時候，您可能需要在執行查詢指令時，針對特定欄位的資料進行時間轉換，例如需要從資料庫當中獲得資料的時候，舉個例子，請參考以下的查詢：
 
     use App\Post;
     use App\User;
@@ -303,7 +304,7 @@ Sometimes you may need to apply casts while executing a query, such as when sele
                 ->whereColumn('user_id', 'users.id')
     ])->get();
 
-The `last_posted_at` attribute on the results of this query will be a raw string. It would be convenient if we could apply a `date` cast to this attribute when executing the query. To accomplish this, we may use the `withCasts` method provided by Laravel 7:
+在該查詢獲得到的結果當中，`last_posted_at` 欄位將會是一個字串，假如我們在執行查詢時進行 `date` 類型的轉換，您將可以透過使用 `withCasts` 方法來完成上述的操作：
 
     $users = User::select([
         'users.*',
@@ -313,17 +314,21 @@ The `last_posted_at` attribute on the results of this query will be a raw string
         'last_posted_at' => 'date'
     ])->get();
 
-### MySQL 8+ Database Queue Improvements
+### MySQL 8+ 資料庫列隊改善
 
-_MySQL database queue improvements were contributed by [Mohamed Said](https://github.com/themsaid)_.
+_MySQL 資料庫列隊改善由 [Mohamed Said](https://github.com/themsaid) 所開發貢獻。_
 
-In previous releases of Laravel, the `database` queue was not considered robust enough for production usage, due to deadlocks. However, Laravel 7 provides improvements to applications using MySQL 8+ as their database backed queue. By using the `FOR UPDATE SKIP LOCKED` clause and other SQL enhancements, the `database` driver may now safely be used in higher volume production applications.
+在先前版本的 Laravel 中， database 队列的健壮性被认为无法满足生产环境的需求。但是，Laravel 7 针对使用基于 MySQL 8+ 数据库队列的应用进行了改进。通过使用 FOR UPDATE SKIP LOCKED 语句进行 SQL 的优化，database 队列驱动可以安全地用于生产环境。
 
-### Artisan `test` Command
+在以往版本的 Laravel 當中，`資料庫` 列隊被認為不足以用於正式環境的需求。但是 Laravel 7 針對使用基於 MySQL 8+ 資料庫列隊的應用進行了改善，透過使用 `FOR UPDATE SKIP LOCKED` 語法進行 SQL 的優化，`database` 列隊驅動可以安全地使用於正式環境當中。
 
-_The `test` command was contributed by [Nuno Maduro](https://twitter.com/enunomaduro)_.
+### Artisan `test` 指令
 
-In addition to the `phpunit` command, you may now use the `test` Artisan command to run your tests. The Artisan test runner provides beautiful console UX and more information regarding the test that is currently running. In addition, the runner will automatically stop on the first test failure:
+_`test` 指令由 [Nuno Maduro](https://twitter.com/enunomaduro) 所開發貢獻。_
+
+除了 phpunit 命令之外，现在可以使用 test Artisan 命令来运行测试。 Artisan 测试运行器提供了漂亮的控制台，以及有关当前正在运行的测试的更多信息。 此外，运行器将在第一次测试失败时自动停止：
+
+除了 `phpunit` 指令以外，現在可以使用 Artisan 的 `test` 指令來進行測試，Artisan 測試提供了漂亮的控制台，以及有關當前正在執行的測試訊息。另外執行將在第一次測試失敗時自動停止：
 
     php artisan test
 
@@ -331,37 +336,38 @@ In addition to the `phpunit` command, you may now use the `test` Artisan command
 <img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1582142435/Screen_Shot_2020-02-19_at_2.00.01_PM.png">
 </p>
 
-Any arguments that can be passed to the `phpunit` command may also be passed to the Artisan `test` command:
+可以傳送給 `phpunit` 指令的任何參數，也可以傳送給 Artisan 的 `test` 指令：
 
     php artisan test --group=feature
 
-### Markdown Mail Template Improvements
+### Markdown 電子信件模板改善
 
-_Markdown mail template improvements were contributed by [Taylor Otwell](https://twitter.com/taylorotwell)_.
+_Markdown 電子信件模板改善由 [Taylor Otwell](https://twitter.com/taylorotwell) 所開發貢獻。_
 
-The default Markdown mail template has received a fresh, more modern design based on the Tailwind CSS color palette. Of course, this template can be published and customized according to your application's needs:
+預設的 Markdown 電子信件模板已經基於 Tailwind CSS 重新改寫，更具現代化的設計。當然，可以根據您的應用程式的需要來發佈或客製化此模板：
 
 <p align="center">
 <img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1582142674/Screen_Shot_2020-02-19_at_2.04.11_PM.png">
 </p>
 
-For more information on Markdown mail, please consult the [mail documentation](/docs/{{version}}/mail#markdown-mailables).
 
-### Stub Customization
+有關於 Markdown 電子信件的更多訊息，請查閱[電子信件發送文件](/docs/{{version}}/mail#markdown-mailables)。
 
-_Stub customization was contributed by [Taylor Otwell](https://twitter.com/taylorotwell)_.
+### 自訂義 Stub
 
-The Artisan console's `make` commands are used to create a variety of classes, such as controllers, jobs, migrations, and tests. These classes are generated using "stub" files that are populated with values based on your input. However, you may sometimes wish to make small changes to files generated by Artisan. To accomplish this, Laravel 7 provides the `stub:publish` command to publish the most common stubs for customization:
+_自訂義 Stub 由 [Taylor Otwell](https://twitter.com/taylorotwell) 所開發貢獻。_
+
+Artisan 控制台的 make 指令用於建立各種類別，例如控制器(Controllers)、任務(Jobs)、資料庫遷移(Migrations)和測試(Tests)，這些類別是根據輸入的參數來生成文件的。但是有時可能希望對 Artisan 生成的文件進行局部修改，因此 Laravel 7 提供了 `stub:publish` 指令來生成最常見的自訂義指令：
 
     php artisan stub:publish
 
-The published stubs will be located within a `stubs` directory in the root of your application. Any changes you make to these stubs will be reflected when you generate their corresponding classes using Artisan `make` commands.
+發佈的指令碼將位於應用程式根目錄當中的 `stubs` 目錄當中，使用 Artisan 的 make 指令產生它們相對應的類別時，對這些 Stub 所做的任何變更都會直接反應在生成文件上。
 
-### Queue `maxExceptions` Configuration
+### 列隊 `maxExceptions` 設定
 
-_The `maxExceptions` property was contributed by [Mohamed Said](https://twitter.com/themsaid)_.
+_列隊 `maxExceptions` 設定由 [Mohamed Said](https://twitter.com/themsaid) 所開發貢獻。_
 
-Sometimes you may wish to specify that a job may be attempted many times, but should fail if the retries are triggered by a given number of exceptions. In Laravel 7, you may define a `maxExceptions` property on your job class:
+有時候執行列隊任務時，希望可以碰到失敗時，再繼續重新嘗試，達到某個錯誤數次後，則列隊任務才認定該次失敗。在 Laravel 7 當中，可以在任務類別上定義 `maxExceptions` 屬性：
 
     <?php
 
@@ -370,21 +376,21 @@ Sometimes you may wish to specify that a job may be attempted many times, but sh
     class ProcessPodcast implements ShouldQueue
     {
         /**
-         * The number of times the job may be attempted.
+         * 該任務可以被重新執行的次數。
          *
          * @var int
          */
         public $tries = 25;
 
         /**
-         * The maximum number of exceptions to allow before failing.
+         * 任務失敗前，所允許拋出例外錯誤的最大次數。
          *
          * @var int
          */
         public $maxExceptions = 3;
 
         /**
-         * Execute the job.
+         * 執行任務。
          *
          * @return void
          */
@@ -399,4 +405,4 @@ Sometimes you may wish to specify that a job may be attempted many times, but sh
         }
     }
 
-In this example, the job is released for ten seconds if the application is unable to obtain a Redis lock and will continue to be retried up to 25 times. However, the job will fail if three unhandled exceptions are thrown by the job.
+在此次範例當中，如果應用程式無法獲得 Redis lock，則該任務將等待 10 秒鐘，並且將重新嘗試 25 次。但是如果任務拋出 3 個未處理的異常錯誤，則該次任務將失敗。
