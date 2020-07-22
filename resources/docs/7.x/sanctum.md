@@ -1,41 +1,41 @@
 # Laravel Sanctum
 
-- [Introduction](#introduction)
-    - [How It Works](#how-it-works)
-- [Installation](#installation)
-- [API Token Authentication](#api-token-authentication)
+- [介紹](#introduction)
+    - [運作原理](#how-it-works)
+- [安裝](#installation)
+- [API 令牌驗證](#api-token-authentication)
     - [Issuing API Tokens](#issuing-api-tokens)
     - [Token Abilities](#token-abilities)
     - [Protecting Routes](#protecting-routes)
     - [Revoking Tokens](#revoking-tokens)
-- [SPA Authentication](#spa-authentication)
+- [SPA 驗證](#spa-authentication)
     - [Configuration](#spa-configuration)
     - [Authenticating](#spa-authenticating)
     - [Protecting Routes](#protecting-spa-routes)
     - [Authorizing Private Broadcast Channels](#authorizing-private-broadcast-channels)
-- [Mobile Application Authentication](#mobile-application-authentication)
+- [手機應用驗證](#mobile-application-authentication)
     - [Issuing API Tokens](#issuing-mobile-api-tokens)
     - [Protecting Routes](#protecting-mobile-api-routes)
     - [Revoking Tokens](#revoking-mobile-api-tokens)
-- [Testing](#testing)
+- [測試](#testing)
 
 <a name="introduction"></a>
-## Introduction
+## 介紹
 
-Laravel Sanctum provides a featherweight authentication system for SPAs (single page applications), mobile applications, and simple, token based APIs. Sanctum allows each user of your application to generate multiple API tokens for their account. These tokens may be granted abilities / scopes which specify which actions the tokens are allowed to perform.
+Laravel Scanctum 提供輕量、簡單的驗證機制給 SPA（單頁面應用）、手機應用及簡單、基於令牌的 API。 Sanctum 允許您的應用程式的每個用戶能夠為他們生成多個 API 令牌。 這些令牌可以被授予能力/範圍，其指定令牌能夠執行哪些動作。
 
 <a name="how-it-works"></a>
-### How It Works
+### 運作原理
 
-Laravel Sanctum exists to solve two separate problems.
+Laravel Sanctum 是為了解決兩個問題而生
 
-#### API Tokens
+#### API 令牌
 
-First, it is a simple package to issue API tokens to your users without the complication of OAuth. This feature is inspired by GitHub "access tokens". For example, imagine the "account settings" of your application has a screen where a user may generate an API token for their account. You may use Sanctum to generate and manage those tokens. These tokens typically have a very long expiration time (years), but may be manually revoked by the user at anytime.
+首先，它是一個向用戶發送 API 令牌的簡單套件，而不會牽涉到複雜的OAuth。 功能的靈感來自 Github "access tokens"。 舉例來說，假設您的應用程式有一個 "帳戶設置" 的頁面，用戶可以在這個頁面為他們的帳戶生成 API 令牌。 您可以使用 Sanctum 來生成和管理這些令牌。 通常這些令牌都會很長一段時間才會過期(以年來計算)，當然用戶隨時都能手動撤銷它們。
 
-Laravel Sanctum offers this feature by storing user API tokens in a single database table and authenticating incoming requests via the `Authorization` header which should contain a valid API token.
+Laravel Sanctum 透過將用戶的 API 令牌儲存在一個資料表，並通過包含有效 API 令牌的`Authorization` 標頭的請求進行身分驗證來實現此功能。
 
-#### SPA Authentication
+#### SPA 驗證
 
 Second, Sanctum exists to offer a simple way to authenticate single page applications (SPAs) that need to communicate with a Laravel powered API. These SPAs might exist in the same repository as your Laravel application or might be an entirely separate repository, such as a SPA created using Vue CLI.
 
