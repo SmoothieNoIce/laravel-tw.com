@@ -37,11 +37,11 @@ Laravel Sanctum 透過將用戶的 API 令牌儲存在一個資料表，並通�
 
 #### SPA 驗證
 
-Second, Sanctum exists to offer a simple way to authenticate single page applications (SPAs) that need to communicate with a Laravel powered API. These SPAs might exist in the same repository as your Laravel application or might be an entirely separate repository, such as a SPA created using Vue CLI.
+其二，Sanctum 是為單頁面應用（SPA）提供簡單的方式與基於 Laravel 的 API 進行驗證。 您的單頁面應用可能和 Laravel 應用存放在同個倉儲內，或者是存放在完全不同的倉儲中，例如使用 Vue CLI 創建的單頁面應用。
 
-For this feature, Sanctum does not use tokens of any kind. Instead, Sanctum uses Laravel's built-in cookie based session authentication services. This provides the benefits of CSRF protection, session authentication, as well as protects against leakage of the authentication credentials via XSS. Sanctum will only attempt to authenticate using cookies when the incoming request originates from your own SPA frontend.
+對於這個特性， Sanctum 不使用任何類型的令牌。 相反的是， Sanctum 使用 Laravel 內建的基於 cookie 的 session 身分驗證服務。 這項特點提供了 CSRF 保護，session 身分驗證，及防止透過 XSS 攻擊而洩漏的身分驗證憑證。 Sanctum 只會嘗試使用來自您 前端單頁面應用的請求進行身分驗證。
 
-> {tip} It is perfectly fine to use Sanctum only for API token authentication or only for SPA authentication. Just because you use Sanctum does not mean you are required to use both features it offers.
+> {tip} 可以將 Sanctum 只用於 API 令牌驗證或是只用於 SPA 驗證。 使用 Sanctum 並不表示需要使用到它所提供的所有特性。
 
 <a name="installation"></a>
 ## Installation
